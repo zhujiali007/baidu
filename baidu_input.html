@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul {
+         list-style: none;
+      }
+      .search-box {
+        padding: 10px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        background-color: #fff;
+      }
+      .search-input {
+        position: relative;
+      }
+      .search-list {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 300px;
+        border: 1px #eee solid;
+      }
+      .search-list > li {
+        color: #000;
+        font: 14px arial;
+        line-height: 22px;
+        padding: 0 8px;
+        cursor: pointer;
+      }
+      .search-list > li:hover {
+        background-color: #eee;
+      }
+      .search-input input {
+        padding: 4px;
+        border-width: 1px;
+        width: 300px;
+        height: 40px;
+        line-height: 40px;
+      }
+      .search-input input:focus {
+        border-color:#4791ff; 
+      }
+      .search-box button {
+        height: 40px;
+        line-height: 40px;
+        background-color: #e34;
+        margin-left: 10px;
+        border: none;
+        padding:0 40px;
+        color: #fff;
+        box-sizing: content-box;
+        box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.8);
+      }
+      .search-box button:focus {
+        outline: none;
+      }
+      .search-box button:active {
+        transform: scale(0.98);
+      }
+    </style>
+  </head>
+  <body>
+      <div class="contain">
+        <div class="search-box">
+          <div class="search-input">
+            <input type="text" placeholder="请输入搜索内容">
+            <ul class="search-list">
+              <!-- <li>你好世界</li>
+              <li>你好世界</li>
+              <li>你好世界</li> -->
+            </ul>
+            
+          </div>
+          <button id="search-btn">搜索</button>
+        </div>
+      </div>
+    <script src="jsonp.js"></script>
+    <script src="baidu.js"></script>
+    <script>
+       
+        baiduInput.init('.search-box');
+    </script>
+</body>
+</html>
